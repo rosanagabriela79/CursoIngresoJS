@@ -4,14 +4,25 @@ y lo muestro por 'ID' al presionar el botón 'mostrar'
 */
 function mostrar()
 {
-	// reservo espacio en memoria para guardar el nombre del usuario
-	let nombre; 
+	var descripcion;
+	var precio;
+	var aumento;
+	var preciofinal;
 
-	// guardo en la variable nombre el texto que escribio en usuario dentro de la ventana prompt
-    nombre = prompt("Ingrese su nombre");
+	descripcion = document.getElementById("descripcion").value;
+	precio = prompt(precio);
+	precio = parseInt(precio);
 
-	//copio el nombre que tengo guardado en la variable nombre dentro de la caja de texto embebida en la pagina html
-    document.getElementById("txtIdNombre").value = nombre
+	aumento = precio*30/100;
+	aumento = parseFloat(aumento);
+	console.log("aumento ", precio);
+    preciofinal = precio + aumento;
+	preciofinal = parseFloat(preciofinal);
+	console.log("preciofinal",preciofinal);
+	
+    
+	alert(" El precio del producto de un 30% es " + preciofinal );
+ 
 	
 
 }
